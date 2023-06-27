@@ -30,6 +30,9 @@ const taskSlice = createSlice({
         state.taskItems[taskIndex].isDone = !state.taskItems[taskIndex].isDone;
       }
     },
+    clearAll(state, action) {
+      state.taskItems.splice(0, state.taskItems.length);
+    },
   },
 });
 export const taskActions = taskSlice.actions;

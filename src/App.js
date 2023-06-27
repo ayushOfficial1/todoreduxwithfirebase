@@ -9,6 +9,9 @@ function App() {
   const handleAdd = () => {
     dispatch(taskActions.toggleModal());
   };
+  const handleClear = () => {
+    dispatch(taskActions.clearAll());
+  };
   return (
     <div className="main-container">
       {open && <Add />}
@@ -20,7 +23,7 @@ function App() {
           <List />{" "}
         </div>
         <div className="clear-all">
-          <button>Clear</button>
+          <button onClick={handleClear}>Clear</button>
         </div>
       </div>
     </div>
